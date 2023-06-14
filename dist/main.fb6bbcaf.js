@@ -155,7 +155,6 @@ var scrollTop = function scrollTop() {
   scrollBtn.addEventListener("click", scrollWindow);
 };
 scrollTop();
-s;
 
 //지엔비 호버
 var gnbShopLi = document.getElementById('gnb_shop');
@@ -314,7 +313,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49500" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49606" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

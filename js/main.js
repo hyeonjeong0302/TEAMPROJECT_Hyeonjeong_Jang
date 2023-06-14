@@ -37,7 +37,7 @@ const scrollTop = function () {
   };
   scrollBtn.addEventListener("click", scrollWindow);
 };
-scrollTop();s
+scrollTop();
 
 
 
