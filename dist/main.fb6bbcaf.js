@@ -135,14 +135,12 @@ document.getElementById("recentCloseBtn").addEventListener("click", function () 
 //탑버튼 스르륵
 var scrollTop = function scrollTop() {
   var topBtn = document.getElementById("topBtn");
-  var scrollBtn = document.createElement("img");
+  var scrollBtn = document.createElement("button");
   scrollBtn.setAttribute("id", "scrollBtn");
   scrollBtn.setAttribute("class", "scroll-btn");
-  scrollBtn.setAttribute("src", "./images/top.png");
-  scrollBtn.style.display = "none";
   topBtn.appendChild(scrollBtn);
   var scrollBtnDisplay = function scrollBtnDisplay() {
-    window.scrollY > window.innerHeight ? scrollBtn.style.display = "block" : scrollBtn.style.display = "none";
+    window.scrollY > window.innerHeight ? scrollBtn.classList.add("show") : scrollBtn.classList.remove("show");
   };
   window.addEventListener("scroll", scrollBtnDisplay);
   // scroll to top when button clicked
@@ -157,6 +155,7 @@ var scrollTop = function scrollTop() {
   scrollBtn.addEventListener("click", scrollWindow);
 };
 scrollTop();
+s;
 
 //지엔비 호버
 var gnbShopLi = document.getElementById('gnb_shop');
@@ -315,7 +314,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49408" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49500" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

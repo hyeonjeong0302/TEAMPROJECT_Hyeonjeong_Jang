@@ -15,18 +15,16 @@ document.getElementById("recentCloseBtn").addEventListener("click", function(){
 //탑버튼 스르륵
 const scrollTop = function () {
   const topBtn = document.getElementById("topBtn")
-  const scrollBtn = document.createElement("img");
+  const scrollBtn = document.createElement("button");
   scrollBtn.setAttribute("id", "scrollBtn");
   scrollBtn.setAttribute("class", "scroll-btn");
-  scrollBtn.setAttribute("src", "./images/top.png");
-  scrollBtn.style.display = "none";
   topBtn.appendChild(scrollBtn)
  
   const scrollBtnDisplay = function () {
     window.scrollY > window.innerHeight ?
-    scrollBtn.style.display = "block" :
-    scrollBtn.style.display = "none" ;
-  };  
+      scrollBtn.classList.add("show") :
+      scrollBtn.classList.remove("show");
+  };
   window.addEventListener("scroll", scrollBtnDisplay);
   // scroll to top when button clicked
   const scrollWindow = function () {
@@ -39,7 +37,7 @@ const scrollTop = function () {
   };
   scrollBtn.addEventListener("click", scrollWindow);
 };
-scrollTop();
+scrollTop();s
 
 
 
