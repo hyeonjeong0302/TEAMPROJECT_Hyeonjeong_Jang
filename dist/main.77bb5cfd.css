@@ -29,9 +29,12 @@ body {
 }
 .quick .scroll-btn {
   cursor: pointer;
+  opacity: 0;
   width: 45px;
   height: 45px;
+  background-image: url(/top.9a364590.png);
   border-radius: 50%;
+  transition: opacity 0.5s, transform 0.5s;
 }
 .quick .scroll-btn.show {
   opacity: 1;

@@ -19,24 +19,27 @@ body {
 /* font-family: 'Noto Sans KR', sans-serif;
   font-family: 'Noto Serif', serif;
   font-family: 'Poppins', sans-serif; */
-.quick {
-  width: 50px;
-  height: 100px;
-  position: fixed;
-  right: 0;
-  bottom: 50px;
-  z-index: 1100;
-}
-.quick .scroll-btn {
-  cursor: pointer;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-}
-.quick .scroll-btn.show {
-  opacity: 1;
-  transition: opacity 1s, transform 1s;
-}
+  .quick {
+    width: 50px;
+    height: 100px;
+    position: fixed;
+    right: 0;
+    bottom: 50px;
+    z-index: 1100;
+  }
+  .quick .scroll-btn {
+    cursor: pointer;
+    opacity: 0;
+    width: 45px;
+    height: 45px;
+    background-image: url(../images/top.png);
+    border-radius: 50%;
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  .quick .scroll-btn.show {
+    opacity: 1;
+    transition: opacity 1s, transform 1s;
+  }
 
 .hidden_history {
   display: none;
